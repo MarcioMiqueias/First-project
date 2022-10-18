@@ -15,11 +15,8 @@ const Article = connection.define('articles', {
     }
 });
 
-// 1 -> M
-Category.hasMany(Article);
-// 1 -> 1
-Article.belongsTo(Category); 
 
-// Create new table -> Article.sync({force: true});
+
+Article.sync({force: true});
 
 module.exports = Article;
